@@ -7,7 +7,15 @@
     <script src="Scripts/aframe.min.js"></script>
   <script src="Scripts/aframe-gif-shader.min.js"></script> 
   <script src="Scripts/aframe-gif-component.min.js"></script>
-    
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var scene = document.querySelector('a-scene');
+      scene.addEventListener('loaded', function(e) {
+        console.log("DONE");
+      });
+    });
+  
+  </script> 
     
   </head>
   <body>
