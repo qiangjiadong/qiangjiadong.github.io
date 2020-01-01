@@ -24,7 +24,7 @@
     <a-asset-item id="logo3d" src="Assets/logo3d.glb"></a-asset-item>
   </a-assets>
 
-  <a-scene loading-screen="dotsColor: red; backgroundColor: black; enabled: false"></a-scene>
+
 
   <a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0"></a-entity>
       
@@ -53,6 +53,10 @@
   <a-entity class="link"></a-entity>
 
   <!-- Camera + Cursor. -->
+
+      
+<a-scene loading-screen="dotsColor: red; backgroundColor: black; enabled: false">
+
   <a-entity>
     <a-camera>
 
@@ -60,7 +64,7 @@
 
     </a-camera>
       </a-entity>
-
+</a-scene>
       
 </a-scene>
 
