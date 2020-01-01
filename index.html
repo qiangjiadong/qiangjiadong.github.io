@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>X Museum Triennial X美术馆三年展</title>
+    <meta name="description" content="X Museum Triennial X美术馆三年展">
+    <script src="Scripts/aframe.min.js"></script>
+  <script src="Scripts/aframe-gif-shader.min.js"></script> 
+  <script src="Scripts/aframe-gif-component.min.js"></script>
+    
+    
+  </head>
+  <body>
+
+    <a-scene>
+      
+
+  <a-assets>
+    <!-- Images. -->
+    <img id="city" src="Assets/bg.jpg">
+    <img id="logob" src="Assets/logob.jpg">
+    <img id="logoa" src="Assets/logoa.jpg">
+    <img id="triennial" src="Assets/Triennial.png">
+    <!-- Models. -->
+    <a-asset-item id="logo3d" src="Assets/logo3d.glb"></a-asset-item>
+  </a-assets>
+
+     
+<a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0"></a-entity>
+      
+    <a-entity line="start: 0, 1, 0; end: 2 -1 -5; color: #696969"
+          line__2="start: -2, 4, 5; end: 0 4 -3; color: #696969"></a-entity>
+  <!-- 360-degree image. -->
+  <a-sky id="image-360" radius="10" src="#city"></a-sky>
+  
+  <a-image src="#logoa"
+           position="0, 1.6, -1.3"
+           scale="1, 1, 1"
+           animation="property: position; from: 0, 1.6, -1.3; to: 1 1.6 -1.3; dur: 5000; easing: easeOutCirc"></a-image>
+        
+<a-image src="#triennial"
+           scale="1, 1, 1"
+           animation="property: position; from: 0, 1.6, -2; to: 0 1.6 -1.3; dur: 5000; easing: easeOutCirc">
+</a-image>
+      
+ 
+  <a-entity position="-0.950, 2.644, -1.3"
+            scale="1, 1, 1"
+            text="value: Hyper Ambulance Mode B, Drawing, 2016.; side: double; color: #ff6dfd; font: Assets/Font/Poppins-Medium.fnt; fontImage: Assets/Font/Poppins-Medium.png"></a-entity>
+  <a-entity text="value: Via stock font name.; font: Assets/Font/Poppins-Medium.fnt; fontImage: Assets/Font/Poppins-Medium.png"></a-entity>
+        
+  <!-- Link template we will build. -->
+  <a-entity class="link"></a-entity>
+
+  <!-- Camera + Cursor. -->
+  <a-entity>
+    <a-camera>
+
+<a-entity geometry="primitive:box;width:0.1;height:0.1;depth:0.1;" position="0 0 -1" material="src: Assets/logoa.jpg; color: #696969; roughness: 1; metalness: 0" animation="property: rotation; dur: 5000;to: 0 360 0; loop: true; easing: easeOutCirc;"></a-entity>
+
+    </a-camera>
+      </a-entity>
+
+      
+</a-scene>
+
+  </body>
+</html>
