@@ -7,14 +7,9 @@
     <script src="Scripts/aframe.min.js"></script>
   <script src="Scripts/aframe-gif-shader.min.js"></script> 
   <script src="Scripts/aframe-gif-component.min.js"></script>
-  <script>
-    window.onload = function() {
-    console.log("done");
-    }
-    </script>
-    
-  </head>
-  <body>
+</head>
+ 
+<body>
 
     <a-scene>
       
@@ -29,7 +24,7 @@
     <a-asset-item id="logo3d" src="Assets/logo3d.glb"></a-asset-item>
   </a-assets>
 
-
+  <a-scene loading-screen="dotsColor: red; backgroundColor: black; enabled: false"></a-scene>
 
   <a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0"></a-entity>
       
