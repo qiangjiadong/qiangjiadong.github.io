@@ -25,12 +25,14 @@
     <a-asset-item id="logo3d" src="Assets/logo3d.glb"></a-asset-item>
   </a-assets>
 
-     
-<a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0"></a-entity>
+  <a-scene loading-screen="dotsColor: red; backgroundColor: black"></a-scene>
+
+  <a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0"></a-entity>
       
     <a-entity line="start: 0, 1, 0; end: 2 -1 -5; color: #696969"
           line__2="start: -2, 4, 5; end: 0 4 -3; color: #696969"></a-entity>
-  <!-- 360-degree image. -->
+  
+          <!-- 360-degree image. -->
   <a-sky id="image-360" radius="10" src="#city"></a-sky>
   
   <a-image src="#logoa"
