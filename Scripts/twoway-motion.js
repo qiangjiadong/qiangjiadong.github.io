@@ -1,5 +1,8 @@
-// usage: 
-// <a-camera two-way="speed: 50; threshold: -20"></a-camera>
+// twoway-motion.js
+// by fasility
+// forward and backward motion on phone and tablet.
+// ---
+// <a-entity camera twoway-motion="speed: 50; threshold: -20"></a-entity>
 // 
 AFRAME.registerComponent('twoway-motion', {
     schema: {
@@ -24,6 +27,7 @@ AFRAME.registerComponent('twoway-motion', {
         if (!AFRAME.utils.device.isMobile() && this.data.nonMobileLoad === false) {
             // this is only for mobile devices.
             //document.querySelector("[camera]").removeAttribute("twoway-motion");
+            // a component can't remove itself without triggering a loop.
             report("Retired. Will only work on mobile.");
             return;
         } else {

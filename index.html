@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>X Museum Triennial X美术馆三年展</title>
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="description" content="X Museum Triennial X美术馆三年展">
-    <script src="Scripts/aframe.min.js"></script>
+    <script src="Scripts/aframe-master.min.js"></script>
+<script>
+  AFRAME.registerComponent("mylink", {
+    init: function() {
+    this.el.addEventListener("click", (e)=> {
+          window.location = this.data.href;
+    })
+    }
+  })
+</script>
   <script src="Scripts/aframe-gif-shader.min.js"></script> 
   <script src="Scripts/aframe-gif-component.min.js"></script>
-
+  <script src="Scripts/twoway-motion.js"></script> 
+  <script src="Scripts/tilt-turn.js"></script>
+      
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -20,7 +31,7 @@
  
 <body>
 
-    <a-scene loading-screen="enabled: false">
+    <a-scene loading-screen="enabled: false" cursor="rayOrigin: mouse">
       
 
   <a-assets>
@@ -29,24 +40,32 @@
     <img id="logob" src="Assets/logob.jpg">
     <img id="logoa" src="Assets/logoa.jpg">
     <img id="triennial" src="Assets/Triennial.png">
+    <img id="triennialeng" src="Assets/TriennialEng.png">
+    <img id="info1" src="Assets/info1.png">
+    <img id="info2" src="Assets/info2.png">
+    <img id="info3" src="Assets/info3.png">
+
     <!-- Models. -->
     <a-asset-item id="logo3d" src="Assets/logo3d.glb"></a-asset-item>
   </a-assets>
 
 
           <!-- 3D Model. -->
-  <a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0"></a-entity>
 
-  <a-entity geometry="primitive: circle; radius: 1" material="side: double" position="0 0 -1" material="src: Assets/logoa.jpg; color: #696969; roughness: 1; metalness: 0"></a-entity>
+        
+        <a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0">
+        </a-entity>
+
+
       
-    <a-entity line="start: 0, 1, 0; end: 2 -1 -5; color: #696969"
-          line__2="start: -2, 4, 5; end: 0 4 -3; color: #696969"></a-entity>
+    
   
           <!-- 360-degree image. -->
   <a-sky id="image-360" radius="10" src="#city"></a-sky>
           
           <!-- Image. -->
   <a-image src="#logoa"
+           
            position="0, 1.6, -1.3"
            scale="1, 1, 1"
            animation="property: position; from: 0, 1.6, -1.3; to: 1 1.6 -1.3; dur: 5000; easing: easeOutCirc"></a-image>
@@ -55,21 +74,57 @@
            scale="1, 1, 1"
            animation="property: position; from: 0, 1.6, -2; to: 0 1.6 -1.3; dur: 5000; easing: easeOutCirc">
 </a-image>
+        
+<a-curvedimage  src="#info1" height="6.0" radius="5" theta-length="90" rotation="90 0 -90" scale="0.3 0.3 0.3" material="color: #ffffff" geometry="height: 0.9; radius: 0.4; segmentsRadial: 47; thetaLength: 90; thetaStart: 45" position="-0.5 1.8 -0.8" theta-start="50"
+               animation="property: rotation; dur: 12000; from: 90 0 -90; to: 450 0 -90; dir: alternate; loop: true; easing: linear;">
+</a-curvedimage>
+        
+<a-curvedimage  src="#info2" height="6.0" radius="5" theta-length="90" rotation="90 0 -90" scale="0.3 0.3 0.3" material="color: #ffffff" geometry="height: 0.9; radius: 0.4; segmentsRadial: 47; thetaLength: 90; thetaStart: 45" position="-0.5 1.5 -0.8" theta-start="50"
+               animation="property: rotation; dur: 10000; from: 90 0 -90; to: 450 0 -90; dir: alternate; loop: true; easing: linear;">
+</a-curvedimage>
+
       
           <!-- Text. -->
-  <a-entity position="0, 2.644, -1.3"
+  <!-- <a-entity position="0, 2.644, -1.3"
             scale="1, 1, 1"
-            text="value: X Museum Triennial: How Do We Begin?; side: double; color: #666; font: Assets/Font/Poppins-SemiBold.fnt; fontImage: Assets/Font/Poppins-SemiBold.png"></a-entity>
+            text="value: X Museum Triennial: How Do We Begin?; side: double; color: #666; font: Assets/Font/Poppins-SemiBold.fnt; fontImage: Assets/Font/Poppins-SemiBold.png"></a-entity>-->
+
+ <!-- <a-text value="贵宾预览
+" font="Assets/Text/info1/SourceHanSansCN-Medium.json" color="#33C3F0" negate="false" text="value: 贵宾预览 Exhibition Preview 2020.3.15, 15:00 – 19:00 贵宾晚宴 VIP Dinner 2020.3.15, 19:00 – 22:00; color: #919191; fontImage: Assets/Text/info1/SourceHanSansCN-Medium.png; side: double; wrapCount: 40.48; negate: false">
+</a-text>-->
         
   <!-- Link template we will build. -->
-  <a-entity class="link"></a-entity>
-
-
+  <a-entity class="link">
+        </a-entity>
+          
+        
+    
   <!-- Camera + Cursor. -->  
 
 
   <a-entity>
-    <a-camera>
+    <a-camera twoway-motion="nonMobileLoad: false; speed: 18" tilt-turn="">
+
+<a-entity line="start: -3 -0.82 -1.3; end: 3 -0.82 -1.3; color: #fff"></a-entity>
+<a-entity line="start: -3 -0.88 -1.3; end: 3 -0.88 -1.3; color: #fff"></a-entity>
+        
+          <a-image src="#triennialeng"
+           scale="1.123, 0.1, 0.1"
+           animation="property: position; from: -2.5, 1, -1.3; to: 2.5 1 -1.3; dur: 30000; dir: alternate; loop: true; easing: linear">
+</a-image>
+        
+           <a-image src="#info3"
+           scale="2.8998, 0.07, 0.07"
+           animation="property: position; from: 2.5, -0.85, -1.3; to: -2.5 -0.85 -1.3; dur: 30000; dir: alternate; loop: true; easing: linear">
+</a-image>
+        
+
+        
+          <a-entity id="Weibo" geometry="primitive: circle; radius: 1" scale="0.015 0.015 0.015" position="-0.12 -0.3 -0.4" material="src: Assets/weibo.png; side: double; roughness: 0; metalness: 0" mylink="href: https://weibo.com"></a-entity>
+        
+          <a-entity id="Wechat" geometry="primitive: circle; radius: 1" scale="0.015 0.015 0.015" position="-0.07 -0.3 -0.4" material="src: Assets/wechat.png; side: double; roughness: 0; metalness: 0" mylink="href: https://www.wechat.com/en"></a-entity>
+        
+          <a-entity id="Instagram" geometry="primitive: circle; radius: 1" scale="0.015 0.015 0.015" position="-0.02 -0.3 -0.4" material="src: Assets/instagram.png; side: double; roughness: 0; metalness: 0" mylink="href: https://www.instagram.com/xmuseum_official/"></a-entity>
 
 <a-entity geometry="primitive:box;width:0.1;height:0.1;depth:0.1;" position="0 0 -1" material="src: Assets/logoa.jpg; color: #696969; roughness: 1; metalness: 0" animation="property: rotation; dur: 5000;to: 0 360 0; loop: true; easing: easeOutCirc;"></a-entity>
 
