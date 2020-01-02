@@ -18,6 +18,9 @@
 </script>
   <script src="Scripts/aframe-gif-shader.min.js"></script> 
   <script src="Scripts/aframe-gif-component.min.js"></script>
+  <script src="Scripts/shader-grid-glitch.js"></script>
+<script src="Scripts/aframe-extras.ocean.min.js"></script>
+
       
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -46,22 +49,34 @@
     <img id="curator" src="Assets/Curator.png">
 
     <!-- Models. -->
-    <a-asset-item id="logo3d" src="Assets/logo3d.glb"></a-asset-item>
+    
+    <a-asset-item id="structure-obj" src="Assets/Structure.obj"></a-asset-item>
+    <a-asset-item id="structure-mtl" src="Assets/Structure.mtl"></a-asset-item>
+    
+    <a-asset-item id="logo3d-obj" src="Assets/logo3d.obj"></a-asset-item>
+    <a-asset-item id="logo3d-mtl" src="Assets/logo3d.mtl"></a-asset-item>
   </a-assets>
+    
+
 
 
           <!-- 3D Model. -->
 
         
-        <a-entity gltf-model="Assets/logo3d.glb" scale="0.001 0.0003 0.001" id="XMuseumLogo3D" visible="" position="0 0 -7" rotation="30 0 0">
-        </a-entity>
 
 
+        <a-entity obj-model="obj: #structure-obj" scale="0.01 0.01 0.01" id="XMuseumStrcuture" material="shader:grid-glitch; color: #9999ff" position="0.1 0 -7" rotation="30 0 0"></a-entity>
+        
+        <a-entity obj-model="obj: #logo3d-obj" scale="0.000001 0.000001 0.0000001" id="Logo3D" material="shader:flat; color: #eee" position="0 0 -7" rotation="0 0 0"></a-entity>
       
     
   
           <!-- 360-degree image. -->
-  <a-sky id="image-360" radius="10" src="#city"></a-sky>
+ <a-sky id="image-360" radius="50" src="#city"></a-sky>
+        
+      <a-entity id="ocean" ocean="density: 20; width: 50; depth: 10; speed: 1"
+                material="color: #ccc; opacity: 0.45; metalness: 0; roughness: 1"
+                rotation="-90 0 0" position="0, 2, 0"></a-entity>
           
           <!-- Image. -->
   <a-image src="#logoa"
@@ -131,6 +146,8 @@
           <a-entity id="Wechat" geometry="primitive: circle; radius: 1" scale="0.015 0.015 0.015" position="-0.07 -0.3 -0.4" material="src: Assets/wechat.png; side: double; roughness: 0; metalness: 0" mylink="href: https://www.wechat.com/en"></a-entity>
         
           <a-entity id="Instagram" geometry="primitive: circle; radius: 1" scale="0.015 0.015 0.015" position="-0.02 -0.3 -0.4" material="src: Assets/instagram.png; side: double; roughness: 0; metalness: 0" mylink="href: https://www.instagram.com/xmuseum_official/"></a-entity>
+        
+          <a-entity id="Rss" geometry="primitive: circle; radius: 1" scale="0.015 0.015 0.015" position="0.03 -0.3 -0.4" material="src: Assets/rss.png; side: double; roughness: 0; metalness: 0" mylink="href: https://mailchimp.com/"></a-entity>
 
 <a-entity geometry="primitive:box;width:0.1;height:0.1;depth:0.1;" position="0 0 -1" material="src: Assets/logoa.jpg; color: #696969; roughness: 1; metalness: 0" animation="property: rotation; dur: 5000;to: 0 360 0; loop: true; easing: easeOutCirc;"></a-entity>
 
