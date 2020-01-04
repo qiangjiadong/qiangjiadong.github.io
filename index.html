@@ -20,7 +20,6 @@
   <script src="Scripts/aframe-gif-component.min.js"></script>
   <script src="Scripts/shader-grid-glitch.js"></script>
 <script src="Scripts/aframe-extras.ocean.min.js"></script>
-
       
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -33,7 +32,7 @@
  
 <body>
 
-    <a-scene device-orientation-permission-ui="enabled: false" vr-mode-ui="enabled: false" loading-screen="enabled: false" cursor="rayOrigin: mouse">
+    <a-scene device-orientation-permission-ui="enabled: false" vr-mode-ui="enabled: false" loading-screen="enabled: false" >
       
 
   <a-assets>
@@ -55,7 +54,76 @@
     
     <a-asset-item id="logo3d-obj" src="Assets/logo3d.obj"></a-asset-item>
     <a-asset-item id="logo3d-mtl" src="Assets/logo3d.mtl"></a-asset-item>
-  </a-assets>
+    
+    <!-- Artists Models. -->  
+    <a-asset-item id="ChandoAo" src="Assets/Artist/ChandoAo.obj"></a-asset-item>
+    
+    <a-asset-item id="ChenWei" src="Assets/Artist/ChenWei.obj"></a-asset-item>
+    
+    <a-asset-item id="ChenZhou" src="Assets/Artist/ChenZhou.obj"></a-asset-item>
+    >
+    <a-asset-item id="ChengRan" src="Assets/Artist/ChengRan.obj"></a-asset-item>
+    
+    <a-asset-item id="CuiJie" src="Assets/Artist/CuiJie.obj"></a-asset-item>
+    <a-asset-item id="CuiJie" src="Assets/Artist/CuiJie.mtl"></a-asset-item>
+    <a-asset-item id="GuanXiao" src="Assets/Artist/GuanXiao.obj"></a-asset-item>
+    
+    <a-asset-item id="GuoCheng" src="Assets/Artist/GuoCheng.obj"></a-asset-item>
+    
+    <a-asset-item id="HuYun" src="Assets/Artist/HuYun.obj"></a-asset-item>
+    
+    <a-asset-item id="JesFan" src="Assets/Artist/JesFan.obj"></a-asset-item>
+    
+    <a-asset-item id="JiangZhuyun" src="Assets/Artist/JiangZhuyun.obj"></a-asset-item>
+    
+    <a-asset-item id="JiuSociety" src="Assets/Artist/JiuSociety.obj"></a-asset-item>
+    
+    <a-asset-item id="LeeLeeChan" src="Assets/Artist/LeeLeeChan.obj"></a-asset-item>
+    <a-asset-item id="LeeLeeChan" src="Assets/Artist/LeeLeeChan.mtl"></a-asset-item>
+    <a-asset-item id="LiShuang" src="Assets/Artist/LiShuang.obj"></a-asset-item>
+    
+    <a-asset-item id="LiWeiyi" src="Assets/Artist/LiWeiyi.obj"></a-asset-item>
+    
+    <a-asset-item id="LuoWei" src="Assets/Artist/LuoWei.obj"></a-asset-item>
+    
+    <a-asset-item id="MeltingWang" src="Assets/Artist/MeltingWang.obj"></a-asset-item>
+    
+    <a-asset-item id="MiaoYing" src="Assets/Artist/MiaoYing.obj"></a-asset-item>
+    
+    <a-asset-item id="MountainRiverJump" src="Assets/Artist/MountainRiverJump.obj"></a-asset-item>
+    
+    <a-asset-item id="ILiangCheng" src="Assets/Artist/ILiangCheng.obj"></a-asset-item>
+    
+    <a-asset-item id="PanWangshu" src="Assets/Artist/PanWangshu.obj"></a-asset-item>
+    
+    <a-asset-item id="PeteJiadongQiang" src="Assets/Artist/PeteJiadongQiang.obj"></a-asset-item>
+    
+    <a-asset-item id="WangHaiyang" src="Assets/Artist/WangHaiyang.obj"></a-asset-item>
+    
+    <a-asset-item id="WangXiaoqu" src="Assets/Artist/WangXiaoqu.obj"></a-asset-item>
+    
+    <a-asset-item id="XiaoshiVivianQin" src="Assets/Artist/XiaoshiVivianQin.obj"></a-asset-item>
+    >
+    <a-asset-item id="XieYi" src="Assets/Artist/XieYi.obj"></a-asset-item>
+    
+    <a-asset-item id="LiuXin" src="Assets/Artist/LiuXin.obj"></a-asset-item>
+    
+    <a-asset-item id="YangBodu" src="Assets/Artist/YangBodu.obj"></a-asset-item>
+    
+    <a-asset-item id="YeLinghan" src="Assets/Artist/YeLinghan.obj"></a-asset-item>
+    
+    <a-asset-item id="YouAda" src="Assets/Artist/YouAda.obj"></a-asset-item>
+    
+    <a-asset-item id="ZhangXuzhan" src="Assets/Artist/ZhangXuzhan.obj"></a-asset-item>
+    
+    <a-asset-item id="ZhouYan" src="Assets/Artist/ZhouYan.obj"></a-asset-item>
+    
+    <a-asset-item id="WangZigeng" src="Assets/Artist/WangZigeng.obj"></a-asset-item>
+    
+    <a-asset-item id="MakYingTung2" src="Assets/Artist/MakYingTung2.obj"></a-asset-item>
+    
+  
+        </a-assets>
     
 
 
@@ -65,11 +133,79 @@
         
 
 
-        <a-entity obj-model="obj: #structure-obj" scale="0.01 0.01 0.01" id="XMuseumStrcuture" material="shader:grid-glitch; color: #9999ff" position="0.1 0 -7" rotation="30 0 0"></a-entity>
+        <a-entity obj-model="obj: #structure-obj" scale="0.01 0.01 0.01" id="XMuseumStrcuture" material="shader:grid-glitch; color: #9999ff" position="0.1 0 -7" rotation="30 0 0">
+        </a-entity>
         
         <a-entity obj-model="obj: #logo3d-obj" scale="0.000001 0.000001 0.0000001" id="Logo3D" material="shader:flat; color: #eee" position="0 0 -7" rotation="0 0 0"></a-entity>
+        
+         <!-- Artist 3D Model. -->
+        
+        <a-entity obj-model="obj: Assets/Artist/ChandoAo.obj;  " scale="1 1 1" id="ChandoAo"  position="-2 1.8 -6" rotation="0 0 0" material="shader: flat; opacity: 0.5; color: #696969" animation="property: rotation; dur: 8000; to: 0 -360 0; loop: true; easing: linear;">
+        </a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/ChenWei.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="ChenWei"  position="-1 1.8 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/ChenZhou.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="ChenZhou"  position="0 1.8 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/ChengRan.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="ChengRan"  position="1 1.8 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
       
+        <a-entity obj-model="obj: Assets/Artist/CuiJie.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="CuiJie"  position="2 1.8 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/Guanxiao.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="Guanxiao"  position="-2 1.3 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/GuoCheng.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="GuoCheng"  position="-1 1.3 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/HuYun.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="HuYun"  position="0 1.3 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/JesFan.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="JesFan"  position="1 1.3 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/JiangZhuyun.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="JiangZhuyun"  position="2 1.3 -6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/JiuSociety.obj;  mtl: Assets/Artist/CuiJie.mtl" scale="1 1 1" id="JiuSociety"  position="-2 1.7 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/LeeLeeChan.obj;  mtl: Assets/Artist/LeeLeeChan.mtl" scale="1 1 1" id="LeeLeeChan"  position="-1 1.7 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/LiShuang.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="LiShuang"  position="0 1.7 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/LiWeiyi.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="LiWeiyi"  position="1 1.7 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/LuoWei.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="LuoWei"  position="2 1.7 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+       <a-entity obj-model="obj: Assets/Artist/MeltingWang.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="MeltingWang"  position="-2 1.2 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+       <a-entity obj-model="obj: Assets/Artist/MiaoYing.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="MiaoYing"  position="-1 1.2 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+       
+        <a-entity obj-model="obj: Assets/Artist/MountainRiverJump.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="MountainRiverJump"  position="0 1.2 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity> 
+        
+        <a-entity obj-model="obj: Assets/Artist/ILiangCheng.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="ILiangCheng"  position="1 1.2 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/PanWangshu.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="PanWangshu"  position="2 1.2 -5.3" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/PeteJiadongQiang.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="PeteJiadongQiang"  position="-2 1.8 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/WangHaiyang.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="WangHaiyang"  position="-1 1.8 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/WangXiaoqu.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="WangXiaoqu"  position="0 1.8 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/XiaoshiVivianQin.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="XiaoshiVivianQin"  position="1 1.8 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/XieYi.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="XieYi"  position="2 1.8 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/LiuXin.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="LiuXin"  position="-2 1.3 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/YangBodu.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="YangBodu"  position="-1 1.3 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/YeLinghan.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="YeLinghan"  position="0 1.3 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/YouAda.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="YouAda"  position="1 1.3 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/ZhangXuzhan.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="ZhangXuzhan"  position="2 1.3 -4.6" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
     
+        <a-entity obj-model="obj: Assets/Artist/ZhouYan.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="ZhouYan"  position="-1 1.7 -3.9" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/WangZigeng.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="WangZigeng"  position="0 1.7 -3.9" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
+        
+        <a-entity obj-model="obj: Assets/Artist/MakYingTung2.obj;  mtl: Assets/Artist/Cuijie.mtl" scale="1 1 1" id="MakYingTung2"  position="1 1.7 -3.9" rotation="0 0 0" animation="property: rotation; dur: 8000;to: 0 -360 0; loop: true; easing: linear;"></a-entity>
   
           <!-- 360-degree image. -->
  <a-sky id="image-360" radius="50" src="#city"></a-sky>
@@ -124,7 +260,7 @@
 
 
   <a-entity>
-    <a-camera twoway-motion="nonMobileLoad: false; speed: 18">
+    <a-camera twoway-motion="nonMobileLoad: false; speed: 18" cursor="rayOrigin: mouse">
 
 <a-entity line="start: -3 -0.82 -1.3; end: 3 -0.82 -1.3; color: #fff"></a-entity>
 <a-entity line="start: -3 -0.88 -1.3; end: 3 -0.88 -1.3; color: #fff"></a-entity>
@@ -152,6 +288,7 @@
 <a-entity geometry="primitive:box;width:0.1;height:0.1;depth:0.1;" position="0 0 -1" material="src: Assets/logoa.jpg; color: #696969; roughness: 1; metalness: 0" animation="property: rotation; dur: 5000;to: 0 360 0; loop: true; easing: easeOutCirc;"></a-entity>
 
     </a-camera>
+      
       </a-entity>
 
       
